@@ -26,6 +26,9 @@ const makeGallery = (slug: string, count: number) =>
     assetPath(`assets/projects/${slug}/page-${String(index + 1).padStart(2, '0')}.jpg`),
   )
 
+const galleryFrom = (slug: string, pages: number[]) =>
+  pages.map((page) => assetPath(`assets/projects/${slug}/page-${String(page).padStart(2, '0')}.jpg`))
+
 export const projects: Project[] = [
   {
     slug: 'tipsy-nest',
@@ -78,7 +81,7 @@ export const projects: Project[] = [
     tags: ['陪伴', '公益领养', '科学养宠'],
     description: '以公益领养和科学养宠为核心，设计温暖可信的宠物陪伴类 APP。',
     cover: assetPath('assets/projects/pamper/cover.jpg'),
-    gallery: makeGallery('pamper', 18),
+    gallery: galleryFrom('pamper', [7, 8, 16, 13, 14, 10, 9, 12, 15, 17, 18, 11, 6, 5, 3, 2]),
     heroTone: '#E49A78',
     background: '宠物领养需要同时传达温暖情绪、信息可信度和流程清晰度。项目围绕领养匹配、宠物档案、养宠知识和公益活动搭建体验。',
     keywords: ['温暖陪伴', '清晰流程', '可信信息', '公益领养'],
@@ -118,7 +121,7 @@ export const projects: Project[] = [
     tags: ['货架视觉', '漫画感', '强识别'],
     description: '用漫画式节奏和高识别色块打造食品包装，让产品在货架上更快被看见。',
     cover: assetPath('assets/projects/cod-fish/cover.jpg'),
-    gallery: makeGallery('cod-fish', 15),
+    gallery: galleryFrom('cod-fish', [2, 10, 11, 12, 13, 14]),
     heroTone: '#EA7D35',
     background: '鳕鱼竹轮包装需要在短时间内传达品类、口味和趣味。项目通过强轮廓、漫画表情和明确色块提升货架吸引力。',
     keywords: ['漫画节奏', '强对比', '食品识别', '货架冲击'],

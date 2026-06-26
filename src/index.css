@@ -472,6 +472,9 @@ p {
 
 .filter-tabs button,
 .case-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 38px;
   padding: 0 14px;
   border: 1px solid var(--line);
@@ -480,6 +483,8 @@ p {
   background: rgba(255, 251, 246, 0.78);
   font-size: 14px;
   font-weight: 900;
+  line-height: 1;
+  text-align: center;
 }
 
 .filter-tabs button.is-active,
